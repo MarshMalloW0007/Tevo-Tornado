@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<profile name="101 Tevo Tornado (experimental)" version="2019-08-25 17:34:33" app="S3D-Software 4.0.1">
-  <baseProfile>Creality CR-10(2)</baseProfile>
+<profile name="103 Tevo Tornado (experimental)" version="2019-08-25 17:34:37" app="S3D-Software 4.0.1">
+  <baseProfile>Tevo Tornado</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
   <printExtruders></printExtruders>
@@ -70,7 +70,7 @@
   <internalInfillAngles>45,-45</internalInfillAngles>
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
-  <generateSupport>0</generateSupport>
+  <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
@@ -82,7 +82,7 @@
   <supportHorizontalPartOffset>0.4</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
-  <supportType>0</supportType>
+  <supportType>1</supportType>
   <supportGridSpacing>4.5</supportGridSpacing>
   <maxOverhangAngle>45</maxOverhangAngle>
   <supportAngles>0</supportAngles>
@@ -141,17 +141,17 @@
   <flipYoverride>-1</flipYoverride>
   <flipZoverride>1</flipZoverride>
   <toolheadOffsets>0,0|0,0|0,0|0,0|0,0|0,0</toolheadOffsets>
-  <overrideFirmwareConfiguration>1</overrideFirmwareConfiguration>
+  <overrideFirmwareConfiguration>0</overrideFirmwareConfiguration>
   <firmwareTypeOverride>RepRap (Marlin/Repetier/Sprinter)</firmwareTypeOverride>
   <GPXconfigOverride>r2</GPXconfigOverride>
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
-  <printerModelsOverride></printerModelsOverride>
+  <printerModelsOverride>00_TEVO_Tornado_Bed.stl</printerModelsOverride>
   <startingGcode>;Init 181010,;G28 			; Home all axes,;G1 Z5 F3000 ; lift,;G92 E0			; Reset extrusion distance,,; // From Cura 181010,; // Update 190823 (GueroLoco),; // Start_gcode,M117 *Start Clean*		; Indicate nozzle clean in progress on LCD,;,M104 S[extruder0_temperature] ,M109 S[extruder0_temperature] ,M109 R[extruder0_temperature] ,;,M107			; Turn layer fan off,G21			; Set to metric [change to G20 if you want Imperial],G90			; Force coordinates to be absolute relative to the origin,G28			; Home X/Y/Z axis,;,;G1 X3 Y1 Z15 F9000		; Move safe Z height to shear strings,;G0 X1 Y1 Z0.2 F9000		; Move in 1mm from edge and up [z] 0.2mm,;G92 E0			; Set extruder to [0] zero,;G1 X100 E12 F500		; Extrude 30mm filiment along X axis 100mm long to prime and clean the nozzle,;G92 E0			; Reset extruder to [0] zero end of cleaning run,;G1 E-1 F500			; Retract filiment by 1 mm to reduce string effect,;G1 X180 F4000		; Quick wipe away from the filament line / purge,;,G92 E0			; Set Extruder to 0 ,G1 X0 Y0 F2000		; Move X and Y to 0 with speed 2000 (mm/min),G1 Z0.1 F1000		; Move Z to 0.1,G1 X8.0 F2000		; Move X to 8.0,G1 Y60.0 E4.0 F1000.0		; Prime - Move Y to 60 and Extruder with 4.0,G1 Y100.0 E8.5 F1000.0		; Prime - Move Y to 100 and Extruder with 8.5,G92 E0			; Set extruder to 0,M117 *End Clean*		; Indicate nozzle clean in progress on LCD,G1 Z5 F3000			; Lift - Move Z to 5,; ,M117 *Printing...*		; start msg,; // Begin printing with sliced GCode after here,;</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>;,; init 181010,;,;M107 			; Fan off,;G1 E-1 F300 			; Retract the filament a bit before lifting the nozzle,;M104 S0 			; Turn off extruder,;M140 S0 			; Turn off bed,;G91			; Relative positioning,;G28 X0 Y0 			; Move X/Y to min endstops so the head is out of teh way,;M84 			; Disable motors,;G90 			; Absolute positioning,;M117 Print ready...,,;,; // From Cura 181010,; // End_gcode,G92 E0			; Zero the extruded length,G1 E-30 F300			; Retract E -30,M106 S0			; Turn off cooling fan,M104 S0			; Turn off temperature,M140 S0		     	; Turn off bed,G91			; Relative positioning,G1 E-1 F300			; Retract the filament a bit before lifting the nozzle to release some of the pressure,G1 Z+20 E-5 X-20 Y-20 F7200	; Move Z up a bit and retract filament even more,G1 X320 Y150 F10000		; Move right mid,M107			; Turn off layer fan,M84			; Disable motors,G90			; Absolute positioning,M117 *The-End* 		; End msg,;,</endingGcode>
+  <endingGcode>;,; init 181010,;,;M107 			; Fan off,;G1 E-1 F300 			; Retract the filament a bit before lifting the nozzle,;M104 S0 			; Turn off extruder,;M140 S0 			; Turn off bed,;G91			; Relative positioning,;G28 X0 Y0 			; Move X/Y to min endstops so the head is out of teh way,;M84 			; Disable motors,;G90 			; Absolute positioning,;M117 Print ready...,,;,; // From Cura 181010,; // End_gcode,G92 E0			; Zero the extruded length,G1 E-30 F300			; Retract E -30,M106 S0			; Turn off cooling fan,M104 S0			; Turn off temperature,M140 S0		     	; Turn off bed,G91			; Relative positioning,G1 E-1 F300			; Retract the filament a bit before lifting the nozzle to release some of the pressure,G1 Z+20 E-5 X-20 Y-20 F7200	; Move Z up a bit and retract filament even more,G1 X320 Y150 F10000		; Move right mid,M107			; Turn off layer fan,M84			; Disable motors,G90			; Absolute positioning,M117 *The-End* 		; End msg,;</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>

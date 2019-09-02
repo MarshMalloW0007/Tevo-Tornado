@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="102 Tevo Tornado (experimental)" version="2019-08-25 11:58:26" app="S3D-Software 4.0.1">
+<profile name="102 Tevo Tornado (experimental)" version="2019-08-25 17:34:35" app="S3D-Software 4.0.1">
   <baseProfile>Creality CR-10(2)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -162,7 +162,7 @@
   <supportUnderspeed>0.8</supportUnderspeed>
   <rapidXYspeed>6000</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
-  <minBridgingArea>5</minBridgingArea>
+  <minBridgingArea>50</minBridgingArea>
   <bridgingExtraInflation>0.2</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>0.6</bridgingSpeedMultiplier>
