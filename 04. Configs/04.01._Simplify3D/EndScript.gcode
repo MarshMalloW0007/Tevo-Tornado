@@ -22,7 +22,7 @@ M140 S0		     	; Turn off bed
 G91			; Relative positioning
 G1 E-1 F300			; Retract the filament a bit before lifting the nozzle to release some of the pressure
 G1 Z+20 E-5 X-20 Y-20 F7200	; Move Z up a bit and retract filament even more
-G1 X320 Y150 F10000		; Move right mid
+G1 X0 Y150 F10000		; Move right min
 M107			; Turn off layer fan
 M84			; Disable motors
 G90			; Absolute positioning
