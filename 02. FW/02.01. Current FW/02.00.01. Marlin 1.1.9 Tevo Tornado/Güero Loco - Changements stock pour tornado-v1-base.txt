@@ -1,0 +1,158 @@
+Marlin 1.1.9 : http://marlinfw.org/meta/download/
+Firmware d'origine de chez Tevo  :https://github.com/tevo3d/Tevo-Tornado
+
+Changements  :
+Dans le répertoire racine : 
+: Logo au démarrage du l'imprimante
+ Fichier _Bootscreen.h 
+
+Dans onfiguration.h:
+Active le logo au démarrage
+  //#define SHOW_CUSTOM_BOOTSCREEN --> #define SHOW_CUSTOM_BOOTSCREEN 
+
+Vitesse de communication
+  #define BAUDRATE 250000 
+ 
+Type de carte mère
+  #define MOTHERBOARD BOARD_RAMPS_14_EFB  -->  #define MOTHERBOARD BOARD_MKS_GEN_L 
+
+Nom affiché sur l'écran
+  //#define CUSTOM_MACHINE_NAME "3D Printer" --> #define CUSTOM_MACHINE_NAME "TornaLoco"
+
+Diametre du filament
+  #define DEFAULT_NOMINAL_FILAMENT_DIA 3.0 --> #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75 
+
+Type de thermistor du bed
+  #define TEMP_SENSOR_BED 0 --> #define TEMP_SENSOR_BED 1
+
+Activer l'autotemp dans le menu
+  //#define PID_AUTOTUNE_MENU --> #define PID_AUTOTUNE_MENU 
+
+PID par défaut de la buse
+  // Ultimaker               -->   // Ultimaker
+  #define DEFAULT_Kp 22.2    -->   //#define DEFAULT_Kp 22.2
+  #define DEFAULT_Ki 1.08    -->   //#define DEFAULT_Ki 1.08
+  #define DEFAULT_Kd 114     -->   //#define DEFAULT_Kd 114
+
+Ajouter au dessus de //Ultimaker 
+  //Tornado
+  #define  DEFAULT_Kp 20.37
+  #define  DEFAULT_Ki 1.50
+  #define  DEFAULT_Kd 69.26
+
+Activer le PID pour le bed
+ //#define PIDTEMPBED -->  #define PIDTEMPBED
+
+PID par défaut du BED
+  #define DEFAULT_bedKp 10.00  --> //#define DEFAULT_bedKp 10.00
+  #define DEFAULT_bedKi .023   --> //#define DEFAULT_bedKi .023
+  #define DEFAULT_bedKd 305.4  --> //#define DEFAULT_bedKd 305.4
+
+En dessous de //#define PID_BED_DEBUG :
+  //Tornado
+  #define  DEFAULT_bedKp 128.82
+  #define  DEFAULT_bedKi 16.91
+  #define  DEFAULT_bedKd 245.36
+
+Longeur max d'extrusion, utile pour la rétraction
+  #define EXTRUDE_MAXLENGTH 200 -->  #define EXTRUDE_MAXLENGTH 300 
+
+Type de circuit detecteur de fin de course
+  #define X_MIN_ENDSTOP_INVERTING false --> #define X_MIN_ENDSTOP_INVERTING true
+  #define Y_MIN_ENDSTOP_INVERTING false --> #define Y_MIN_ENDSTOP_INVERTING true
+  #define Z_MIN_ENDSTOP_INVERTING false --> #define Z_MIN_ENDSTOP_INVERTING true
+
+Type de drivers
+  //#define X_DRIVER_TYPE  A4988 --> #define X_DRIVER_TYPE  A4988
+  //#define Y_DRIVER_TYPE  A4988 --> #define Y_DRIVER_TYPE  A4988
+  //#define Z_DRIVER_TYPE  A4988 --> #define Z_DRIVER_TYPE  A4988
+  //#define E0_DRIVER_TYPE A4988 --> #define E0_DRIVER_TYPE A4988
+
+Nombre de step/mm pour les axes
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 } --> #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.3190, 80.3190, 399.2901, 400 }
+
+Acceleration max
+  #define DEFAULT_ACCELERATION          3000 --> #define DEFAULT_ACCELERATION          1500
+
+Vitesse de rétraction par défaut
+  #define DEFAULT_RETRACT_ACCELERATION  3000 --> #define DEFAULT_RETRACT_ACCELERATION  10000
+
+Jerk X par défaut
+  #define DEFAULT_XJERK                 10.0 --> #define DEFAULT_XJERK                  8.0
+
+Jerk Y par défaut
+  #define DEFAULT_YJERK                 10.0 --> #define DEFAULT_YJERK                  8.0
+
+Vitesse de dépalcement pour la détection des limits du X et Y
+  #define XY_PROBE_SPEED 8000 --> #define XY_PROBE_SPEED 15000
+
+Sens de rotation des moteurs
+  #define INVERT_Y_DIR true  --> #define INVERT_Y_DIR false
+  #define INVERT_Z_DIR false --> #define INVERT_Z_DIR true
+  #define INVERT_E0_DIR false --> #define INVERT_E0_DIR true
+
+Dimensions du BED, x et y
+  #define X_BED_SIZE 200 --> #define X_BED_SIZE 320
+  #define Y_BED_SIZE 200 --> #define Y_BED_SIZE 300
+
+Dimension de la hauteur, z
+#define Z_MAX_POS 200 --> #define Z_MAX_POS 400
+
+Limiter le déplacement par software (ou non)
+  #define MIN_SOFTWARE_ENDSTOPS --> //#define MIN_SOFTWARE_ENDSTOPS
+
+Vitesse de déplacement entre les palpations (ex : BLTouch)
+  #define HOMING_FEEDRATE_XY (50*60) -->  #define HOMING_FEEDRATE_XY (100*60)
+  #define HOMING_FEEDRATE_Z  (4*60)  ==>  #define HOMING_FEEDRATE_Z  (25*60)
+
+Activation des sauvegades des configurations dans le EEPROM
+  //#define EEPROM_SETTINGS --> #define EEPROM_SETTINGS
+
+Activation du menu de nivellement manuelle dans le menu
+  //#define LEVEL_BED_CORNERS --> #define LEVEL_BED_CORNERS
+
+s'assure que les palpations (ex BLTOUCH) soit dans la surface du bed
+  //#define Z_SAFE_HOMING --> #define Z_SAFE_HOMING
+
+Definition des valeurs du préchaufface de PLA
+  #define PREHEAT_1_TEMP_HOTEND 205
+  #define PREHEAT_1_TEMP_BED     50
+
+Definition des valeurs du préchaufface de l'ABS (je l'utilise pour le PETG)
+  #define PREHEAT_2_TEMP_HOTEND 240
+  #define PREHEAT_2_TEMP_BED    65
+
+Activation du park (util pour le M600)
+  //#define NOZZLE_PARK_FEATURE --> #define NOZZLE_PARK_FEATURE
+
+Activation du lecteur SD
+  //#define SDSUPPORT --> #define SDSUPPORT
+
+Définiton du nomre de "pulse" pour 1 step pour le bouton pour changer d'option dans le menu
+  //#define ENCODER_PULSES_PER_STEP 4 --> #define ENCODER_PULSES_PER_STEP 4
+
+Definition de déplacement dans le menu par Step
+  //#define ENCODER_STEPS_PER_MENU_ITEM 1 --> #define ENCODER_STEPS_PER_MENU_ITEM 1
+
+Activation des Home X, Y et X dans le menu
+  //#define INDIVIDUAL_AXIS_HOMING_MENU --> #define INDIVIDUAL_AXIS_HOMING_MENU
+
+Definition du type d'affichage de l'imprimante
+  //#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER --> #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER 
+ 
+ 
+Dans configuration_adv.h
+Pour le démarrage et arrêt automatique du ventilateur de la buse
+ #define E0_AUTO_FAN_PIN -1 -->#define E0_AUTO_FAN_PIN 7
+ 
+  
+
+Pour activer le code M600
+Dans configuration.hauteur
+  //#define FILAMENT_RUNOUT_SENSOR --> #define FILAMENT_RUNOUT_SENSOR 
+
+Dans configuration_adv.hauteur
+  //#define ADVANCED_PAUSE_FEATURE --> #define ADVANCED_PAUSE_FEATURE
+    #define FILAMENT_CHANGE_UNLOAD_LENGTH   100 --> #define FILAMENT_CHANGE_UNLOAD_LENGTH     0
+	#define ADVANCED_PAUSE_PURGE_LENGTH  50 --> #define ADVANCED_PAUSE_PURGE_LENGTH       0  
+    #define FILAMENT_UNLOAD_PURGE_LENGTH      8 --> #define FILAMENT_UNLOAD_PURGE_LENGTH      0
