@@ -1573,7 +1573,8 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-//#define SPEAKER
+//CC
+#define SPEAKER
 
 //
 // The duration and frequency for the UI feedback sound.
@@ -1725,6 +1726,13 @@
 //
 //Guero Loco
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+
+//CC https://github.com/MarlinFirmware/Marlin/issues/12003
+#define ST7920_DELAY_1 DELAY_NS(0)
+//CC https://github.com/MarlinFirmware/Marlin/issues/12003
+#define ST7920_DELAY_2 DELAY_NS(400)
+//CC https://github.com/MarlinFirmware/Marlin/issues/12003
+#define ST7920_DELAY_3 DELAY_NS(0)
 
 //
 // ReprapWorld Graphical LCD
