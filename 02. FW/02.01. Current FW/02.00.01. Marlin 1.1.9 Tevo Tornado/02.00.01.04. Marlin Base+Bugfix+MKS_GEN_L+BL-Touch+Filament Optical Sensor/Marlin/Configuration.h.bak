@@ -927,14 +927,10 @@
 // The size of the print bed
 //#define X_BED_SIZE 200
 //Guero Loco
-//#define X_BED_SIZE 320
-//CC
-#define X_BED_SIZE 290
+#define X_BED_SIZE 320
 //#define Y_BED_SIZE 200
 //Guero Loco
-//#define Y_BED_SIZE 300
-//CC
-#define Y_BED_SIZE 290
+#define Y_BED_SIZE 300
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1033,8 +1029,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//Guero Loco
-#define AUTO_BED_LEVELING_BILINEAR
+//#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1084,17 +1079,9 @@
 
   // Set the boundaries for probing (where the probe can reach).
   //#define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  //CC
-  #define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
-  //CC
-  #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
   //#define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  //CC
-  #define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE)
-  //CC
-  #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE)
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
@@ -1456,8 +1443,7 @@
  *
  * View the current statistics with M78.
  */
-//CC
-#define PRINTCOUNTER
+//#define PRINTCOUNTER
 
 //=============================================================================
 //============================= LCD and SD support ============================
