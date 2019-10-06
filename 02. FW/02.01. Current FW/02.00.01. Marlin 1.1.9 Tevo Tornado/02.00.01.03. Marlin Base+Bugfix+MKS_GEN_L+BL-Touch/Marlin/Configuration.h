@@ -927,10 +927,14 @@
 // The size of the print bed
 //#define X_BED_SIZE 200
 //Guero Loco
-#define X_BED_SIZE 320
+//#define X_BED_SIZE 320
+//CC
+#define X_BED_SIZE 290
 //#define Y_BED_SIZE 200
 //Guero Loco
-#define Y_BED_SIZE 300
+//#define Y_BED_SIZE 300
+//CC
+#define Y_BED_SIZE 290
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
