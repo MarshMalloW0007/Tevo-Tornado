@@ -60,7 +60,6 @@
 >cfg_pwroff_save_mode:0
 
 #---------------------------------------------------------------------------
-
 #########  Filament Change Function  ##############################
 
 #the speed to extrude filament(mm/min)
@@ -75,15 +74,13 @@
 
 #It is the minimum temperature for filament change.
 It will auto heat up if the current temp doesn't reach the target.
->cfg_filament_load_limit_temperature:200
-
+>cfg_filament_load_limit_temperature:210
 
 #---------------------------------------------------------------------------
-
 ############  Leveling Function  ########################################
 
 #leveling mode(manual:0; auto:1; conceal leveling button:2)
->cfg_leveling_mode:0
+>cfg_leveling_mode:1
 
 #the command of auto leveling (G29 is available for Marlin.While G32 is for  Repetier and Smoothieware)
 >cfg_auto_leveling_cmd:G28;G29;
@@ -108,7 +105,6 @@ It will auto heat up if the current temp doesn't reach the target.
 > cfg_leveling_z_high: 10
 
 #---------------------------------------------------------------------------
- 
 #############  WIFI Function  ##########################################
 
 #wifi mode(AP:1; STA:0)
@@ -129,7 +125,6 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_ip_dhcp_flag:1
 
 #--------------------------------------------------------------------------------
-
 ############## Function Customization #######################################
 #functional button:
 #in the style of simple, the functional button display in the "set" interface
@@ -146,29 +141,19 @@ It will auto heat up if the current temp doesn't reach the target.
 #The "zoffset" button below the "More" interface(0:disable,1:enable)
 >cfg_zprob_offset_btn_display:1
 
-
-
 #set number of  "More" button 
->moreitem_pic_cnt:0
-
+>moreitem_pic_cnt:1
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
->moreitem_button1_cmd:G28 X0;
-
+>moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215 
 >moreitem_button2_cmd:G28 X0;
-
 >moreitem_button3_cmd:G28 Y0;
-
 >moreitem_button4_cmd:G28 Y0;
-
 >moreitem_button5_cmd:G28 Z0;
-
 >moreitem_button6_cmd:G28 Z0;
-
 >moreitem_button7_cmd:G28;
 
 #how many "More" button display on screen interface
->morefunc_cnt:0
-
+>morefunc_cnt:1
 #command setting on button1~7
 >morefunc1_cmd:G28;
 >morefunc2_cmd:G28;
@@ -176,8 +161,8 @@ It will auto heat up if the current temp doesn't reach the target.
 >morefunc4_cmd:G28;
 >morefunc5_cmd:G28;
 >morefunc6_cmd:G28;
-
 >morefunc7_cmd:G28;
+
 #---------------------------------------------------------------------------------
 ##### Display Customization(button and logo customized see User's Manual) #######
 
