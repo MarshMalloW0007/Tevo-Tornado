@@ -142,7 +142,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_zprob_offset_btn_display:1
 
 #set number of  "More" button 
->moreitem_pic_cnt:1
+>moreitem_pic_cnt:2
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
 >moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215 
 >moreitem_button2_cmd:G28 X0;
@@ -153,7 +153,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >moreitem_button7_cmd:G28;
 
 #how many "More" button display on screen interface
->morefunc_cnt:1
+>morefunc_cnt:2
 #command setting on button1~7
 >morefunc1_cmd:G28;
 >morefunc2_cmd:G28;
