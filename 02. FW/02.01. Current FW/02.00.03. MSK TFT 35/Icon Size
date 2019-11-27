@@ -1,0 +1,27 @@
+Name 	Resolution
+bmp_logo 	480x320
+bmp_preview 	200x200
+bmp_operate 	150х80
+bmp_pause 	150x80
+bmp_printing_back 	150x80
+bmp_resume 	150x80
+bmp_stop 	150x80
+  	 
+Main icons 	117x140
+  	 
+bmp_back 	117х92
+bmp_pageDown 	117х92
+bmp_pageUp 	117х92
+  	 
+bmp_function2 	100х100
+bmp_menu 	100х100
+bmp_speed_extru 	100x100
+bmp_next 	100x100
+  	 
+bmp_zpos 	50x50
+bmp_time_state 	45x45
+bmp_bed_state 	45х45
+bmp_ext1_state 	45х45
+bmp_ext2_state 	45х45
+bmp_fan_state 	45х45
+bmp_speed_state 	45x45
