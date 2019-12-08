@@ -11,7 +11,7 @@
 >cfg_baud_rate:4
 
 #multi-language(enable:1, disable:0)
->cfg_multiple_language:1
+>cfg_multiple_language:0
 
 #languages setting(simplified (simplified Chinese:1; traditional Chinese:2; English:3; Russian:4; Spanish:5; French:6; Italian:7).
 #This configuration is valid when "cfg_multiple_language" is disabled.
@@ -142,7 +142,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_zprob_offset_btn_display:1
 
 #set number of  "More" button 
->moreitem_pic_cnt:2
+>moreitem_pic_cnt:1
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
 >moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215 
 >moreitem_button2_cmd:G28 X0;
@@ -153,7 +153,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >moreitem_button7_cmd:G28;
 
 #how many "More" button display on screen interface
->morefunc_cnt:2
+>morefunc_cnt:0
 #command setting on button1~7
 >morefunc1_cmd:G28;
 >morefunc2_cmd:G28;
@@ -215,10 +215,11 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_dialog_btn_textcolor:0xFFFFFF
 
 #3D effects setting (disable: 0; enable: 1)
->cfg_BUTTON_3D_effects:0
+>cfg_BUTTON_3D_effects:1
 
 #position of button font offset bottom(unit:pixel)
->cfg_btn_text_offset:23
+#>cfg_btn_text_offset:23
+>cfg_btn_text_offset:1
 
 ##Screen rotation 180 °(0:disable,0xEE:enable)
 >cfg_screen_overturn_180:0x00
