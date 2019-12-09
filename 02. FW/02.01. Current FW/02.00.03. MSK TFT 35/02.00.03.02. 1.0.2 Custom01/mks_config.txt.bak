@@ -215,11 +215,11 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_dialog_btn_textcolor:0xFFFFFF
 
 #3D effects setting (disable: 0; enable: 1)
->cfg_BUTTON_3D_effects:0
+>cfg_BUTTON_3D_effects:1
 
 #position of button font offset bottom(unit:pixel)
 #>cfg_btn_text_offset:23
->cfg_btn_text_offset:2
+>cfg_btn_text_offset:1
 
 ##Screen rotation 180 °(0:disable,0xEE:enable)
 >cfg_screen_overturn_180:0x00
