@@ -167,10 +167,12 @@ It will auto heat up if the current temp doesn't reach the target.
 ##### Display Customization(button and logo customized see User's Manual) #######
 
 #the color of screen background
->cfg_background_color:0x000000
+#>cfg_background_color:0x000000
+>cfg_background_color:0xFFFFFF
 
 #the color of title text
->cfg_title_color:0xFFFFFF
+#>cfg_title_color:0xFFFFFF
+>cfg_title_color:0x000000
 
 #the color of temperature,fan,(etc) background
 >cfg_state_bkcolor:0x000000
@@ -179,7 +181,8 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_state_text_color:0xFFFFFF
 
 #the color of file button
->cfg_filename_bkcolor:0x000000
+#>cfg_filename_bkcolor:0x000000
+>cfg_filename_bkcolor:0xFFFFFF
 
 #the color of file text
 >cfg_filename_textcolor:0xFFFFFF
@@ -188,22 +191,26 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_btn_bkcolor:0x000000
 
 #the color of general button text
->cfg_btn_textcolor:0xFFFFFF
+#>cfg_btn_textcolor:0xFFFFFF
+>cfg_btn_textcolor:0x000000
 
 #the color of status button background
->cfg_state_btn_bkcolor:0x000000
+>#cfg_state_btn_bkcolor:0x000000
+>cfg_state_btn_bkcolor:0xFFFFFF
 
 #the color of status button text
->cfg_state_btn_textcolor:0xFFFFFF
+#>cfg_state_btn_textcolor:0xFFFFFF
+>cfg_state_btn_textcolor:0x000000
 
 #the color of "back" button background
 >cfg_back_btn_bkcolor:0x000000
 
 #the color of "back" button text
->cfg_back_btn_textcolor:0xFFFFFF
+#>cfg_back_btn_textcolor:0xFFFFFF
+>cfg_back_btn_textcolor:0x000000
 
 #the color of selected button background
->cfg_sel_btn_bkcolor:0x000000
+>cfg_sel_btn_bkcolor:0xFFFFFF
 
 #the color of selected button text
 >cfg_sel_btn_textcolor:0xFFFFFF
@@ -215,11 +222,11 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_dialog_btn_textcolor:0xFFFFFF
 
 #3D effects setting (disable: 0; enable: 1)
->cfg_BUTTON_3D_effects:1
+>cfg_BUTTON_3D_effects:0
 
 #position of button font offset bottom(unit:pixel)
 #>cfg_btn_text_offset:23
->cfg_btn_text_offset:1
+>cfg_btn_text_offset:2
 
 ##Screen rotation 180 °(0:disable,0xEE:enable)
 >cfg_screen_overturn_180:0x00
