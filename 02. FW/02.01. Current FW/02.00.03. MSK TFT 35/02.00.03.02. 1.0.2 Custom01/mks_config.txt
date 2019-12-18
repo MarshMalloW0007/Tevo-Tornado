@@ -172,7 +172,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of title text
 #>cfg_title_color:0xFFFFFF
->cfg_title_color:0x0000FF
+>cfg_title_color:0x00FF00
 
 #the color of temperature, fan,(etc) background
 #>cfg_state_bkcolor:0x000000
@@ -180,7 +180,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of temprature,fan,(etc) text
 #>cfg_state_text_color:0xFFFFFF
->cfg_state_text_color:0x000000
+>cfg_state_text_color:0x00FF00
 
 #the color of file button
 #>cfg_filename_bkcolor:0x000000
@@ -188,7 +188,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of file text
 #>cfg_filename_textcolor:0xFFFFFF
->cfg_filename_textcolor:0x000000
+>cfg_filename_textcolor:0x00FF00
 
 #the color of general button background
 #>cfg_btn_bkcolor:0x000000
@@ -196,7 +196,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of general button text
 #>cfg_btn_textcolor:0xFFFFFF
->cfg_btn_textcolor:0x000000
+>cfg_btn_textcolor:0x00FF00
 
 #the color of status button background
 >#cfg_state_btn_bkcolor:0x000000
@@ -212,22 +212,22 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of "back" button text
 #>cfg_back_btn_textcolor:0xFFFFFF
->cfg_back_btn_textcolor:0x000000
+>cfg_back_btn_textcolor:0x00FF00
 
 #the color of selected button background
 >cfg_sel_btn_bkcolor:0xFFFFFF
 
 #the color of selected button text
 #>cfg_sel_btn_textcolor:0xFFFFFF
->cfg_sel_btn_textcolor:0x000000
+>cfg_sel_btn_textcolor:0x00FF00
 
 #the color of dialog button background
-#>cfg_dialog_btn_bkcolor:0xff0000
->cfg_dialog_btn_bkcolor:0xffffff
+#>cfg_dialog_btn_bkcolor:0xFF0000
+>cfg_dialog_btn_bkcolor:0xFFFFFF
 
 #the color of dialog button text
 #>cfg_dialog_btn_textcolor:0xFFFFFF
->cfg_dialog_btn_textcolor:0xFF0000
+>cfg_dialog_btn_textcolor:0x00FF00
 
 #3D effects setting (disable: 0; enable: 1)
 >cfg_BUTTON_3D_effects:0
