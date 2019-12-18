@@ -48,7 +48,7 @@
 >cfg_PB0_trigger_Level:0
 
 #set PB1 signal (high level:1; low level:0)
->cfg_PB1_trigger_Level:0
+>cfg_PB1_trigger_Level:1
 
 #set error range of Z-axis on breakpoints recovery 
 >cfg_breakpoint_z_error:0.2
@@ -141,8 +141,8 @@ It will auto heat up if the current temp doesn't reach the target.
 #The "zoffset" button below the "More" interface(0:disable,1:enable)
 >cfg_zprob_offset_btn_display:1
 
-#set number of  "More" button 
->moreitem_pic_cnt:1
+#set number of "More" button 
+>moreitem_pic_cnt:2
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
 >moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215 
 >moreitem_button2_cmd:G28 X0;
@@ -153,7 +153,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >moreitem_button7_cmd:G28;
 
 #how many "More" button display on screen interface
->morefunc_cnt:0
+>morefunc_cnt:2
 #command setting on button1~7
 >morefunc1_cmd:G28;
 >morefunc2_cmd:G28;
@@ -172,9 +172,9 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of title text
 #>cfg_title_color:0xFFFFFF
->cfg_title_color:0x000000
+>cfg_title_color:0x0000FF
 
-#the color of temperature,fan,(etc) background
+#the color of temperature, fan,(etc) background
 #>cfg_state_bkcolor:0x000000
 >cfg_state_bkcolor:0xFFFFFF
 
@@ -204,7 +204,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of status button text
 #>cfg_state_btn_textcolor:0xFFFFFF
->cfg_state_btn_textcolor:0x000000
+>cfg_state_btn_textcolor:0x00FF00
 
 #the color of "back" button background
 #>cfg_back_btn_bkcolor:0x000000
@@ -227,7 +227,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #the color of dialog button text
 #>cfg_dialog_btn_textcolor:0xFFFFFF
->cfg_dialog_btn_textcolor:0x000000
+>cfg_dialog_btn_textcolor:0xFF0000
 
 #3D effects setting (disable: 0; enable: 1)
 >cfg_BUTTON_3D_effects:0
@@ -243,6 +243,6 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_screen_display_mode:1
 
 #Enable function of display error message. (no:0; Yes:1）
->cfg_display_eeror_message:0
+>cfg_display_eeror_message:1
 
 #-----------------------------------------------------------------------
