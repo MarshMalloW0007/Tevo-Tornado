@@ -2,7 +2,7 @@ Name 	Resolution
 bmp_logo 			480x320
 bmp_preview 		200x200
 bmp_operate 		150х80
-bmp_pause 	1		 50x80
+bmp_pause 			150x80
 bmp_printing_back 	150x80
 bmp_resume 			150x80
 bmp_stop 			150x80
