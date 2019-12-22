@@ -1,6 +1,8 @@
 Name 	Resolution
 bmp_logo 			480x320
+
 bmp_preview 		200x200
+
 bmp_operate 		150х80
 bmp_pause 			150x80
 bmp_printing_back 	150x80
@@ -19,6 +21,7 @@ bmp_speed_extru 	100x100
 bmp_next 			100x100
   	 
 bmp_zpos 			50x50
+
 bmp_time_state 		45x45
 bmp_bed_state 		45х45
 bmp_ext1_state 		45х45

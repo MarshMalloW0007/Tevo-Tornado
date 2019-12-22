@@ -131,6 +131,7 @@ It will auto heat up if the current temp doesn't reach the target.
 #in the style of Classic,the functional button display in the "home" interface
 #functional button(0:no display; 1:display)
 >cfg_function_btn1_display:1
+#cfg_function_btn2_display
 
 #the functional button 1 command
 >function_btn1_cmd:M84;
@@ -142,7 +143,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >cfg_zprob_offset_btn_display:1
 
 #set number of "More" button 
->moreitem_pic_cnt:2
+>moreitem_pic_cnt:0
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
 >moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215 
 >moreitem_button2_cmd:G28 X0;
@@ -153,7 +154,7 @@ It will auto heat up if the current temp doesn't reach the target.
 >moreitem_button7_cmd:G28;
 
 #how many "More" button display on screen interface
->morefunc_cnt:2
+>morefunc_cnt:0
 #command setting on button1~7
 >morefunc1_cmd:G28;
 >morefunc2_cmd:G28;
@@ -223,7 +224,7 @@ It will auto heat up if the current temp doesn't reach the target.
 #>cfg_btn_text_offset:23
 >cfg_btn_text_offset:2
 
-##Screen rotation 180 °(0:disable,0xEE:enable)
+#Screen rotation 180 °(0:disable,0xEE:enable)
 >cfg_screen_overturn_180:0x00
 
 #the style of display on the screen home(0:classic,1:simple)
