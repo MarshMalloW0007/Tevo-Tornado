@@ -13,7 +13,7 @@
 #multi-language(enable:1, disable:0)
 >cfg_multiple_language:0
 
-#languages setting(simplified (simplified Chinese:1; traditional Chinese:2; English:3; Russian:4; Spanish:5; French:6; Italian:7).
+#languages setting(simplified (simplified Chinese:1; traditional Chinese:2; English:3; Russian:4; Spanish:5;French:6;Italian:7).
 #This configuration is valid when "cfg_multiple_language" is disabled.
 >cfg_language_type:6
 
@@ -25,7 +25,7 @@
 
 #the max target temp of extruder and heated bed
 >cfg_max_sprayer_temperature:220
->cfg_max_hotbed_temperature:60
+>cfg_max_hotbed_temperature:55
 
 #pause position (-1 is invalid; Z-axis is relative position)
 >cfg_XPOS:-1
@@ -38,7 +38,7 @@
 #enable UPS?(yes:1; no:0)
 >cfg_have_ups_device:0
 
-#enable power detecting module(mks 220det:1; mks pwc:0)
+#enable power detecting module(mks ups:2;mks 220det:1; mks pwc:0)
 >cfg_insert_det_module:0
 
 #enable auto off after print finish function (no:0; Yes:1）
@@ -53,13 +53,13 @@
 #set error range of Z-axis on breakpoints recovery 
 >cfg_breakpoint_z_error:0.2
 
-#the function of power detecting and filament detecting(1:disable;0:enable)
+#Shielding power failure detection function (1: shielding function; 0: no shielding function)
 >cfg_mask_PB0_PB1_function:0
 
-# the method of save the gcode data with power off(1:Capacitor storage; 0:File system save)
+#Power-off save mode (1: capacitor save, 0: file system save)
 >cfg_pwroff_save_mode:0
-
 #---------------------------------------------------------------------------
+
 #########  Filament Change Function  ##############################
 
 #the speed to extrude filament(mm/min)
@@ -76,14 +76,16 @@
 It will auto heat up if the current temp doesn't reach the target.
 >cfg_filament_load_limit_temperature:210
 
+
 #---------------------------------------------------------------------------
+
 ############  Leveling Function  ########################################
 
 #leveling mode(manual:0; auto:1; conceal leveling button:2)
 >cfg_leveling_mode:1
 
 #the command of auto leveling (G29 is available for Marlin.While G32 is for  Repetier and Smoothieware)
->cfg_auto_leveling_cmd:G28;G29;
+>cfg_auto_leveling_cmd:G28;G29;M500;
 
 #the point number of manual leveling:(3,4,5 point available)
 >cfg_point_number:5
@@ -105,10 +107,14 @@ It will auto heat up if the current temp doesn't reach the target.
 > cfg_leveling_z_high: 10
 
 #---------------------------------------------------------------------------
+ 
 #############  WIFI Function  ##########################################
 
+#wifi model(MKS WIFI TFT:0;  MKS HLK-WIFI:1)
+>cfg_wifi_type:0
+
 #wifi mode(AP:1; STA:0)
->cfg_wifi_mode:1
+>cfg_wifi_mode:0
 
 #wifi name and password
 >cfg_wifi_ap_name:MKS_wifi
@@ -121,14 +127,11 @@ It will auto heat up if the current temp doesn't reach the target.
 #cloud service port
 >cfg_cloud_port:10086
 
-#Dynamic access IP
->cfg_ip_dhcp_flag:1
+#------------------------------------------------------------------------------
 
-#--------------------------------------------------------------------------------
 ############## Function Customization #######################################
+
 #functional button:
-#in the style of simple, the functional button display in the "set" interface
-#in the style of Classic,the functional button display in the "home" interface
 #functional button(0:no display; 1:display)
 >cfg_function_btn1_display:1
 
@@ -141,10 +144,14 @@ It will auto heat up if the current temp doesn't reach the target.
 #The "zoffset" button below the "More" interface(0:disable,1:enable)
 >cfg_zprob_offset_btn_display:1
 
-#set number of "More" button 
+#The "calibrate" button below the "More" interface(0:disable,1:enable)
+>cfg_calibrate_btn_display:1
+
+#set number of  "More" button 
 >moreitem_pic_cnt:2
+
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
->moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215 
+>moreitem_button1_cmd:M106 S0;M140 S60;M190 S60;M104 S215;M109 S215;M109 R215;
 >moreitem_button2_cmd:G28 X0;
 >moreitem_button3_cmd:G28 Y0;
 >moreitem_button4_cmd:G28 Y0;
@@ -154,6 +161,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 #how many "More" button display on screen interface
 >morefunc_cnt:2
+
 #command setting on button1~7
 >morefunc1_cmd:G28;
 >morefunc2_cmd:G28;
@@ -161,21 +169,20 @@ It will auto heat up if the current temp doesn't reach the target.
 >morefunc4_cmd:G28;
 >morefunc5_cmd:G28;
 >morefunc6_cmd:G28;
->morefunc7_cmd:G28;
 
+>morefunc7_cmd:G28;
 #---------------------------------------------------------------------------------
 ##### Display Customization(button and logo customized see User's Manual) #######
 
-#the color of
+#the color of 
 # screen background
 >cfg_background_color:0xFFFFFF
 # title text
 >cfg_title_color:0x000000
 
-#the color of temperature, fan,(etc) 
+#the color of temperature,fan,(etc)
 # background
 >cfg_state_bkcolor:0xFFFFFF
->cfg_state_color:0xFFFFFF
 # text
 >cfg_state_text_color:0x000000
 
@@ -206,7 +213,6 @@ It will auto heat up if the current temp doesn't reach the target.
 #the color of selected button
 # background
 >cfg_sel_btn_bkcolor:0xFFFFFF
-#the color of selected button
 # text
 >cfg_sel_btn_textcolor:0x000000
 
@@ -219,17 +225,19 @@ It will auto heat up if the current temp doesn't reach the target.
 #3D effects setting (disable: 0; enable: 1)
 >cfg_BUTTON_3D_effects:0
 
-#position of button font offset bottom(unit:pixel)
-#>cfg_btn_text_offset:23
+#Button font offset bottom position (unit: pixels)
 >cfg_btn_text_offset:2
 
-##Screen rotation 180 °(0:disable,0xEE:enable)
+#The screen is flipped 180°(0x00: no flip, 0xEE: flip)
 >cfg_screen_overturn_180:0x00
 
-#the style of display on the screen home(0:classic,1:simple)
+#Screen home display mode (0: classic mode, 1: simple mode)
 >cfg_screen_display_mode:1
 
 #Enable function of display error message. (no:0; Yes:1）
 >cfg_display_eeror_message:1
+
+#Enable function of babastep. (no:0; Yes:1）
+>cfg_babystep_btn_display:1
 
 #-----------------------------------------------------------------------
